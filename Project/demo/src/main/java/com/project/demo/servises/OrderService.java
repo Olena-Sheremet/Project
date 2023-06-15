@@ -1,6 +1,5 @@
 package com.project.demo.servises;
 
-
 import java.util.List;
 
 public interface OrderService {
@@ -9,6 +8,4 @@ public interface OrderService {
     void saveOrder(com.project.demo.models.Order order);
     void updateOrder(com.project.demo.models.Order order);
     void deleteOrder(Long id);
-
-
 }

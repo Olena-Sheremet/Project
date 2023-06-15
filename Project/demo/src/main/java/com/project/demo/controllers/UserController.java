@@ -1,11 +1,9 @@
 package com.project.demo.controllers;
 
-import org.springframework.ui.Model;
-import com.project.demo.models.Order;
 import com.project.demo.models.User;
-import com.project.demo.servises.OrderService;
 import com.project.demo.servises.UserService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
