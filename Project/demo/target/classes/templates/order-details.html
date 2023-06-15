@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Detail</title>
+</head>
+<body>
+<h1>Order Detail</h1>
+<p>ID: <span th:text="${order.id}"></span></p>
+<p>User: <span th:text="${order.user.name}"></span></p>
+<p>Products:</p>
+<ul>
+    <li th:each="product : ${order.products}" th:text="${product.name}"></li>
+</ul>
+<a th:href="@{/orders/{id}/edit(id=${order.id})}">Edit</a>
+<a th:href="@{/orders/{id}/delete(id=${order.id})}">Delete</a>
+</body>
+</html>

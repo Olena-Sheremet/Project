@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Form</title>
+</head>
+<body>
+<h1>Order Form</h1>
+<form th:action="@{/orders/create}" method="post" th:object="${order}">
+    <select th:field="*{user}">
+        <option th:each="user : ${users}" th:value="${user}" th:text="${user.name}"></option>
+    </select><br>
+    <label>Products:</label><br>
+    <input type="text" th:field="*{products[0].name}" placeholder="Product Name" required><br>
+    <input type="text" th:field="*{products[0].price}" placeholder="Product Price" required><br>
+    <input type="text" th:field="*{products[1].name}" placeholder="Product Name" required><br>
+    <input type="text" th:field="*{products[1].price}" placeholder="Product Price" required><br>
+    <!-- Add more fields for additional products if needed -->
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>
