@@ -1,11 +1,7 @@
 package com.project.demo.models;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
-import org.springframework.data.annotation.Id;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "users")

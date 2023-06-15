@@ -58,7 +58,6 @@ public class ProductController {
         Product product = productService.getProductById(id);
         product.setName(updatedProduct.getName());
         product.setPrice(updatedProduct.getPrice());
-        // ... update other fields
         productService.updateProduct(product);
         return "redirect:/products";
     }

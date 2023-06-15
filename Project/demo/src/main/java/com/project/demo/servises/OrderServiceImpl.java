@@ -2,7 +2,6 @@ package com.project.demo.servises;
 
 
 import com.project.demo.repositories.OrderRepository;
-import jakarta.persistence.criteria.Order;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
