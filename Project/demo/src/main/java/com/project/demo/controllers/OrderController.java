@@ -65,7 +65,7 @@ public class OrderController {
     @PostMapping("/{id}/edit")
     public String editOrder(@PathVariable Long id, Order updatedOrder) {
         Order order = orderService.getOrderById(id);
-        //order.setUser(updatedOrder.getUser());
+        order.setUser(updatedOrder.getUser());
         // ... update other fields
         orderService.updateOrder(order);
         return "redirect:/orders";
